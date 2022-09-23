@@ -1,0 +1,25 @@
+
+Virtualenv Ex1
+----------
+
+1. Change directory to the VENV directory in your home directory:
+
+   cd ~/VENV
+
+2. Exit your current virtualenv using the 'deactivate' command.
+
+3. Create a new python37 virtualenv named 'pynet_test'
+
+    python3.7 -m venv pynet_test
+
+4. Activate that virtualenv using:
+
+    source ~/VENV/pynet_test/bin/activate
+
+5. Execute the 'pip list' command to make sure you have a blank virtual environment.
+
+6. Install the current version of pip using 'pip install pip==21.3.1'
+
+6. Use 'pip install netmiko' to reinstall the netmiko library.
+
+7. View 'pip list' again to see what is now installed.
