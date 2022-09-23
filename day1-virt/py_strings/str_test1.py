@@ -10,3 +10,5 @@ if x == 1:
 elif x < 7:
     print("Testing")
     print("Another change")
+
+print("Testing")
