@@ -1,3 +1,5 @@
 ipython
 pdbr
 rich
+black
+pylama
