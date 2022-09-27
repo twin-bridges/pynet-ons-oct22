@@ -1,0 +1,68 @@
+[
+    {
+        "protocol": "O",
+        "type": "E2",
+        "network": "0.0.0.0",
+        "mask": "0",
+        "distance": "110",
+        "metric": "1",
+        "nexthop_ip": "172.31.255.254",
+        "nexthop_if": "Vlan3967",
+        "uptime": "3w6d"
+    },
+    {
+        "protocol": "C",
+        "type": "",
+        "network": "172.31.254.0",
+        "mask": "24",
+        "distance": "",
+        "metric": "",
+        "nexthop_ip": "",
+        "nexthop_if": "Vlan254",
+        "uptime": ""
+    },
+    {
+        "protocol": "L",
+        "type": "",
+        "network": "172.31.254.2",
+        "mask": "32",
+        "distance": "",
+        "metric": "",
+        "nexthop_ip": "",
+        "nexthop_if": "Vlan254",
+        "uptime": ""
+    },
+    {
+        "protocol": "C",
+        "type": "",
+        "network": "172.31.255.5",
+        "mask": "32",
+        "distance": "",
+        "metric": "",
+        "nexthop_ip": "",
+        "nexthop_if": "Loopback0",
+        "uptime": ""
+    },
+    {
+        "protocol": "C",
+        "type": "",
+        "network": "172.31.255.254",
+        "mask": "31",
+        "distance": "",
+        "metric": "",
+        "nexthop_ip": "",
+        "nexthop_if": "Vlan3967",
+        "uptime": ""
+    },
+    {
+        "protocol": "L",
+        "type": "",
+        "network": "172.31.255.255",
+        "mask": "32",
+        "distance": "",
+        "metric": "",
+        "nexthop_ip": "",
+        "nexthop_if": "Vlan3967",
+        "uptime": ""
+    }
+]

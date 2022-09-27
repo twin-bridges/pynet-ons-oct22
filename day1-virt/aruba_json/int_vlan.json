@@ -1,0 +1,217 @@
+{
+    "_meta": {
+        "int_vlan": {
+            "_mappings": {
+                "root": "int_vlan",
+                "key_list": {
+                    "id": "id",
+                    "int_vlan_shut": "int_vlan_shut",
+                    "int_vlan_ip.ipparams": "int_vlan_ip.ipparams",
+                    "int_vlan_ip.ipaddr": "int_vlan_ip.ipaddr",
+                    "int_vlan_ip.ipmask": "int_vlan_ip.ipmask",
+                    "int_vlan_ip.dhcp-client": "int_vlan_ip.dhcp-client",
+                    "int_vlan_ip.client-id": "int_vlan_ip.client-id",
+                    "int_vlan_ip.cid": "int_vlan_ip.cid",
+                    "int_vlan_ip_ospf_msg_digest_key.value": "int_vlan_ip_ospf_msg_digest_ key.value",
+                    "int_vlan_ip_ospf_msg_digest_key.passwd": "int_vlan_ip_ospf_msg_digest_ key.passwd",
+                    "int_vlan_ip_ospf_area.area-id": "int_vlan_ip_ospf_area.area-id"
+                }
+            },
+            "_operations": [
+                "GET",
+                "SET"
+            ],
+            "_keys": "id",
+            "_inst_key": "id",
+            "id": {
+                "_min": 1,
+                "_type": "INT",
+                "_help": "Vlan interface number",
+                "_max": 4094
+            },
+            "int_vlan_shut": {},
+            "int_vlan_ip": {
+                "ipparams": {
+                    "_type": "enum",
+                    "_children": [
+                        "ipaddrmask",
+                        "dhcp_opt",
+                        "pppoe"
+                    ],
+                    "_enum_type": "mixed"
+                },
+                "ipaddrmask": {
+                    "_parent": "ipparams",
+                    "_children": [
+                        "ipaddr",
+                        "ipmask"
+                    ]
+                },
+                "ipaddr": {
+                    "_parent": "ipaddrmask",
+                    "_type": "IPADDR",
+                    "_help": "A.B.C.D IP address"
+                },
+                "ipmask": {
+                    "_parent": "ipaddrmask",
+                    "_type": "IPADDR",
+                    "_help": "A.B.C.D IP subnet mask"
+                },
+                "dhcp_opt": {
+                    "_parent": "ipparams",
+                    "_children": [
+                        "dhcp-client"
+                    ]
+                },
+                "dhcp-client": {
+                    "_type": "keyword",
+                    "_parent": "dhcp_opt",
+                    "_children": [
+                        "client-id"
+                    ]
+                },
+                "client-id": {
+                    "_type": "keyword",
+                    "_parent": "dhcp-client",
+                    "_optional": true,
+                    "_children": [
+                        "cid"
+                    ]
+                },
+                "cid": {
+                    "_min": 1,
+                    "_type": "STRING",
+                    "_max": 255,
+                    "_parent": "client-id",
+                    "_optional": true,
+                    "_help": "ASCII string to be sent in the options"
+                },
+                "pppoe": {
+                    "_type": "keyword",
+                    "_parent": "ipparams"
+                }
+            },
+            "int_vlan_ipv6_addr": {
+                "_keys": "eui-64,ipaddr",
+                "_inst_key": "ipaddr",
+                "eui-64": {
+                    "_type": "keyword",
+                    "_optional": true
+                },
+                "ipaddr": {
+                    "_type": "IP6PREFIX",
+                    "_help": "IPv6 prefix"
+                }
+            },
+            "int_vlan_mtu": {
+                "value": {
+                    "_min": 1280,
+                    "_type": "INT",
+                    "_max": 1500,
+                    "_default_val": 1500,
+                    "_help": "MTU value"
+                }
+            }
+        }
+    },
+    "_data": {
+        "int_vlan": [
+            {
+                "id": 95,
+                "int_vlan_ip": {
+                    "ipaddr": "95.95.1.1",
+                    "ipparams": "ipaddrmask",
+                    "ipmask": "255.255.255.0"
+                },
+                "int_vlan_routing": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                },
+                "int_vlan_ndra_hlimit": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 64
+                },
+                "int_vlan_ndra_interval": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 600
+                },
+                "int_vlan_ndra_ltime": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 1800
+                },
+                "int_vlan_ndra_mtu": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 1500
+                },
+                "int_vlan_nd_reachtime": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 0
+                },
+                "int_vlan_nd_rtrans_time": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 0
+                },
+                "int_vlan_mtu": {
+                    "value": 1390
+                },
+                "int_vlan_suppress_arp": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                }
+            },
+            {
+                "id": 96,
+                "int_vlan_ip": {
+                    "dhcp-client": true,
+                    "ipparams": "dhcp_opt"
+                },
+                "int_vlan_mtu": {
+                    "value": 1400
+                }
+            },
+            {
+                "id": 97,
+                "int_vlan_mtu": {
+                    "value": 1290
+                }
+            },
+            {
+                "id": 98,
+                "int_vlan_ip": {
+                    "cid": "123",
+                    "ipparams": "dhcp_opt",
+                    "client-id": true,
+                    "dhcp-client": true
+                }
+            },
+            {
+                "id": 99,
+                "int_vlan_mtu": {
+                    "value": 1360
+                },
+                "int_vlan_suppress_arp": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                }
+            }
+        ]
+    }
+}

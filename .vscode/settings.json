@@ -1,0 +1,8 @@
+{
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/Users/ktbyers/GIT/pynet-ons-oct22/.venv/bin/black",
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pycodestylePath": "pycodestyle",
+    "editor.formatOnSave": true,
+}
