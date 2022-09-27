@@ -13,3 +13,9 @@ elif x < 7:
 
 for i in range(10):
     print(i)
+
+while i < 100:
+    print(i)
+    i += 1
+
+print(i)
