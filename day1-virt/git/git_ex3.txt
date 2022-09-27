@@ -1,0 +1,12 @@
+
+a. Create another new branch in your lab environment
+
+b. Switch to this branch
+
+c. Add a file and commit this new file (in the new branch)
+
+d. Switch back to the main branch and add the same file, but with different content
+
+e. Merge the new branch into the main branch
+
+f. Resolve the merge conflict that was created.
