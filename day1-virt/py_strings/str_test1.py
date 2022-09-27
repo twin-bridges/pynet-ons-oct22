@@ -10,3 +10,6 @@ if x == 1:
 elif x < 7:
     print("Testing")
     print("Another change")
+
+for i in range(10):
+    print(i)
