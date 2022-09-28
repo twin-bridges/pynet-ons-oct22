@@ -11,4 +11,3 @@ e. Add a secret field to the dictionary
 f. Use the .get() method to try to retrieve a non-existent ‘device_type’ 
    field. Return a default value of ‘cisco_ios’ when the .get() key lookup 
    fails.
-
