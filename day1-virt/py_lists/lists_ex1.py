@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+from rich import print
+
 my_list = ["hello", "new", "something", "else", "now"]
 my_list.append("whatever")
 my_list.append("xyz")
