@@ -10,4 +10,3 @@ Loops Ex2
 4. Increment i each time through the while loop
 
 5. Print out i (except don't print out i when it is 13).
-

@@ -9,4 +9,3 @@ Loops Ex1
 3.  Use continue to skip over 13 (not print it)
 
 4.  Break when you hit 39 (stop printing after this and exit the loop)
-
