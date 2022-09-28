@@ -4,5 +4,6 @@
     "python.formatting.blackPath": "/Users/ktbyers/GIT/pynet-ons-oct22/.venv/bin/black",
     "python.linting.pycodestyleEnabled": true,
     "python.linting.pycodestylePath": "pycodestyle",
+    "python.linting.pycodestyleArgs": ["--max-line-length=100"],
     "editor.formatOnSave": true,
 }
