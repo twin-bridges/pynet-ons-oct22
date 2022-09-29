@@ -5,4 +5,4 @@ if i == 10:
 elif i > 10:
     print("Something else")
 else:
-    print("what")
+    print("new")
