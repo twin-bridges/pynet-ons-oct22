@@ -8,4 +8,3 @@ a. Create a list with three numbers
 b. Use *args to call the function
 c. Create a dictionary that has three keys of x, y, and z
 d. Call the functions using **kwargs
-

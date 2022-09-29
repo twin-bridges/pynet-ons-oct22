@@ -16,4 +16,3 @@ For each of the above parsing use a function.
 Save this information to a dictionary.
 
 Print out the dictionary's keys and values using pprint.
-

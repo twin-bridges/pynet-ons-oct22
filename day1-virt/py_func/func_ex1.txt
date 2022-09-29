@@ -10,4 +10,3 @@ e. Call this function using named arguments x, y (let z be the default)
 f. Call this function with one positional argument and two named arguments.
 g. Call this function using three strings.
 h. Call this function using three lists.
-
