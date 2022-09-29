@@ -32,4 +32,3 @@ Process the 'show_ip_int_brief.txt' file and create a data structure from it.
  'Vlan1': {'ip_address': 'unassigned',
            'line_protocol': 'down',
            'line_status': 'down'}}
-
