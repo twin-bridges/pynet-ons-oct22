@@ -10,4 +10,3 @@ Assign at least the ip_addr, username, and password field to the
 object using __init__.
 
 Create four different network device objects using this class 
-
