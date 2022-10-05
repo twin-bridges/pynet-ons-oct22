@@ -8,3 +8,7 @@ else:
     print("new")
 
 print("Something else")
+
+while True:
+    print("Hello")
+    break
