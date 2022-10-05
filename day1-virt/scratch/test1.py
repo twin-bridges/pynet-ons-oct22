@@ -12,5 +12,4 @@ print("Something else")
 while True:
     print("Hello")
     print("Something else")
-    print("Another thing")
     break
