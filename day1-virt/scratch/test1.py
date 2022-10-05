@@ -6,3 +6,5 @@ elif i > 10:
     print("Something else")
 else:
     print("new")
+
+print("Something new")
