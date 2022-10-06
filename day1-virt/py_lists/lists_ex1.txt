@@ -7,3 +7,4 @@ c. Use pop to remove the first element
 d. find the length of the list
 e. sort the list
 f. test
+g. test3
