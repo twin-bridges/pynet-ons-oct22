@@ -1,7 +1,7 @@
 
-a. Create a GitHub account (if you don’t have one)
+a. Create a GitHub account (if you don’t have one) - Done
 
-b. Create a pynet_test repository on GitHub
+b. Create a pynet_test repository on GitHub - Done
 
 c. Clone it to the lab environment
 

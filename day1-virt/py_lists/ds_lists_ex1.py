@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 from rich import print
 
-my_list = ["David", "Mirav", "Tom", "Juan", "Mike"]
-my_list.append("Khalil")
-my_list.append("Jesus")
+my_list = ["hello", "new", "something", "else", "now"]
+my_list.append("whatever")
+my_list.append("xyz")
 print(my_list.pop(0))
 
 print(f"Length of list: {len(my_list)}")
