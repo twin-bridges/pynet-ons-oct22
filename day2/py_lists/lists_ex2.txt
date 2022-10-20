@@ -12,5 +12,4 @@ c. Print the length of the list. This will give you the number of lines in that 
 d. Print out lines number 1 and 35 respectively. Which indices are these?
 
 e. Split line number1 into fields using a comma as the field separator. One of these fields
-should be IOS Version. Print this to standard output.
-
+should be OS Version. Print this to standard output.

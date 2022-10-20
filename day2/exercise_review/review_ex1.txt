@@ -1,0 +1,13 @@
+
+Review Exercise1
+-----------------
+
+Process the 'show_ip_int_brief.txt' file and create a data structure from it.
+
+Process the 'show_ip_int_brief.txt' file and create a data structure from it.
+
+1. Create a dictionary where the keys are the interface names
+
+2. The corresponding values should be the line “Protocol” field.
+  
+3. Use rich.print to print out your data structure.
