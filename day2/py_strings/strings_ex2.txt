@@ -1,0 +1,8 @@
+
+Expand on exercise1, except now process the tabular data to extract the AP name, the AP IP address, and the AP status.
+
+Create a new dictionary where the key is the AP name and the corresponding value is the AP status.
+
+Normalize both the AP name and the AP status to be all lower case.
+
+Use rich to print out this new dictionary.

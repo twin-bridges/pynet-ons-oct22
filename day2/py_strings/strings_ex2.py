@@ -7,6 +7,8 @@ header = True
 footer = False
 ap_table = {}
 for line in ap_database.splitlines():
+    line = line.strip()
+
     # Strip header and footer information
     if header:
         if "Name" in line and "Standby IP" in line:
@@ -16,18 +18,20 @@ for line in ap_database.splitlines():
         continue
     elif footer:
         continue
+    elif not line:
+        # Skip blank lines
+        continue
 
     if "Flags" in line and "Unprovisioned" in line:
         footer = True
         continue
 
     fields = line.split()
-    ap_name = fields[0]
+    ap_name = fields[0].lower()
     ap_ip_address = fields[3]
-    ap_status = fields[4]
+    ap_status = fields[4].lower()
 
     ap_table[ap_name] = ap_status
-    break
 
 print()
 print(ap_table)
