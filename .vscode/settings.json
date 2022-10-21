@@ -8,4 +8,5 @@
         "--max-line-length=100"
     ],
     "editor.formatOnSave": true,
+    "python.terminal.executeInFileDir": true
 }

@@ -4,6 +4,7 @@ with open("show_version.txt") as f:
 
 for line in show_ver:
     if "Processor board ID" in line:
-        _, serial_number = line.split("Processor board ID")
+        _, serial_number = line.split("Processor board ID ")
+        break
 
 print(f"\nSerial Number is {serial_number}\n")
