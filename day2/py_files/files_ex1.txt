@@ -6,4 +6,3 @@ b. Write a python program that reads this file and prints out the lines of the f
 c. write a python program that writes a different file
 d. close this new file and re-open it and append to it.
 e. Check your code into GitHub
-
