@@ -7,9 +7,3 @@ elif i > 10:
 else:
     print("new")
 
-print("Something else")
-
-while True:
-    print("Hello")
-    print("Something else")
-    break
