@@ -7,4 +7,3 @@ elif i > 10:
 else:
     print("new")
 
-print("Something new")

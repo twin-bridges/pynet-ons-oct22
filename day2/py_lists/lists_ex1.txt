@@ -1,0 +1,11 @@
+Lists Ex1
+----------
+
+a. Create a list with five strings
+b. Use append to add two strings to the list
+c. Use pop to remove the first element
+d. Find the length of the list
+e. Sort the list
+f. Loop over the list and print both the index and the value. 
+g. For the loop printing use f-strings and make the index a 3-character width field; the value should use a 15-character 
+   width field.

@@ -1,0 +1,12 @@
+Loops Exercise 2
+----------------
+
+1. Take a timestamp using time.time().
+
+2. Enter into a while loop. Stay in this while loop until 15 seconds have passed (relative to your timestamp).
+
+3. Inside the while loop, sleep for 1 second. Additionally, print out the elapsed time since your timestamp.
+
+4. You should exit your while loop after 15 seconds have passed.
+
+5. Outside of the while loop. Print the total elapsed time (one last time).

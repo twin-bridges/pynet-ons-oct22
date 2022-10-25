@@ -1,0 +1,22 @@
+
+AP Database
+-----------
+Name               Group    AP Type  IP Address   Status        Flags  Switch IP       Standby IP
+----               -----    -------  ----------   ------        -----  ---------       ----------
+library-1	     sjc      225      10.10.10.13  Up 8m:29s     Rc2    10.5.200.21     0.0.0.0
+library-1          sjc      225      10.10.10.10  Down          Rc2    10.5.200.21     0.0.0.0
+library-2          sjc      225      10.10.10.12  Down          Rc2    10.5.200.21     0.0.0.0
+rm135-1            sjc      135      10.10.10.9   Down          Rc2    10.5.200.21     0.0.0.0
+rm135-2            sjc      135      10.10.10.11  Down          Rc2    10.5.200.21     0.0.0.0
+rm137-1            sjc      225      192.168.1.1  Up 1h:2m:05s  R      10.5.200.21     0.0.0.0
+rm137-2            sjc      225      10.10.10.8   Down          Rc2    10.5.200.21     0.0.0.0
+
+Flags: U = Unprovisioned; N = Duplicate name; G = No such group; L = Unlicensed
+       I = Inactive; D = Dirty or no config; E = Regulatory Domain Mismatch
+       X = Maintenance Mode; P = PPPoE AP; B = Built-in AP
+       R = Remote AP; R- = Remote AP requires Auth; C = Cellular RAP;
+       c = CERT-based RAP; 1 = 802.1x authenticated AP; 2 = Using IKE version 2
+       u = Custom-Cert RAP; S = Standby-mode AP; J = USB cert at AP
+       M = Mesh node; Y = Mesh Recovery
+
+Total APs:7
