@@ -1,0 +1,7 @@
+1. Create a function named “print_hello”.
+
+2. It takes no arguments and prints the message “hello world” three times.
+
+3. Have your program call this function three times in a row.
+
+4. You should see “hello world” printed nine times in total.

@@ -4,4 +4,3 @@ f.close()
 
 for line in data.splitlines():
     print(line)
-
