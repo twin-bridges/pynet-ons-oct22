@@ -1,10 +1,10 @@
 def display_output(msg1, msg2, msg3="Hello World"):
     print()
-    print("#" * 80)
+    print("#" * 60)
     print(f"msg1: {msg1}")
     print(f"msg2: {msg2}")
     print(f"msg3: {msg3}")
-    print("#" * 80)
+    print("#" * 60)
     print()
 
 
