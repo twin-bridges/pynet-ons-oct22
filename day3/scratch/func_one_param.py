@@ -1,9 +1,9 @@
 def display_output(output):
     print()
-    print("#" * 80)
+    print("#" * 60)
     print("CFG Change: ")
     print(output)
-    print("#" * 80)
+    print("#" * 60)
     print()
 
 
