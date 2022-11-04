@@ -9,4 +9,10 @@
     ],
     "editor.formatOnSave": true,
     "python.terminal.executeInFileDir": true,
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+    }
 }

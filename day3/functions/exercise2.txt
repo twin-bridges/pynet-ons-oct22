@@ -1,0 +1,7 @@
+
+1. Expand on exercise 1 except the message you print out is NOT 
+“hello world” instead it is a parameter named “msg” that is defined 
+in the function definition.
+
+2 Call your function, three different times and pass in three different 
+arguments (pass in three different messages).

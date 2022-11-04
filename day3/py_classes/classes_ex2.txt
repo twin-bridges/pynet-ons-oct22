@@ -1,0 +1,11 @@
+Expand on exercise1 and create two new methods for your NetworkDevice class.
+
+Method1 should be named “print_ip” and should print the IP address of the device.
+
+Method2 should be named “print_creds” and should print the username and password
+of the device.
+
+Both methods should have only a single parameter “self”. No other parameters 
+should be used.
+
+Create an instance of this class and call your two methods.

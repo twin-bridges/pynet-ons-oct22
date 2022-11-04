@@ -1,0 +1,12 @@
+
+Classes Ex1
+------------
+
+Create a NetworkDevice class. The class should have fields for ip_addr, username, 
+and password. Assign the ip_addr, username, and password field to the object in 
+the “init” method.
+
+Create four different network device objects using this class.
+
+For one of these objects print out the ip_addr, username, and password attributes 
+of the object.
