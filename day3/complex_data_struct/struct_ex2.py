@@ -33,6 +33,7 @@ def main():
             parsed_data[network]["nexthop_ip"] = nexthop_ip
 
     print(parsed_data)
+    print()
 
 
 if __name__ == "__main__":
