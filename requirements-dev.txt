@@ -6,3 +6,4 @@ pylama
 pylint
 pycodestyle
 pyyaml
+requests
