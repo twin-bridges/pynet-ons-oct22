@@ -7,6 +7,8 @@ PASSWORD = getpass("Enter Aruba Controller password: ")
 HTTP_HEADERS = {"Content-Type": "application/json"}
 SSL_VERIFY = False
 
+
+
 host = "aruba.lasthop.io"
 api_port = "4343"
 login_url = f"https://{host}:{api_port}/v1/api/login"
