@@ -8,7 +8,6 @@ HTTP_HEADERS = {"Content-Type": "application/json"}
 SSL_VERIFY = False
 
 
-
 host = "aruba.lasthop.io"
 api_port = "4343"
 login_url = f"https://{host}:{api_port}/v1/api/login"
@@ -21,7 +20,7 @@ response = session.post(login_url, data=creds, headers=HTTP_HEADERS, verify=SSL_
 
 if response.status_code == 200:
     """
-        {'_global_result': {'status': '0', 'status_str': "You've logged in successfully.", 'UIDARUBA':
+    {'_global_result': {'status': '0', 'status_str': "You've logged in successfully.", 'UIDARUBA':
     'NTQ4ODM4M2YtMGI0NS00N2Y2LWJjMTEtMDEx', 'X-CSRF-Token': 'OGMwMGE0MGMtM2E3NC00NDAyLWFiY2EtYTVh'}}
     """
     aruba_ds = response.json().get("_global_result")
