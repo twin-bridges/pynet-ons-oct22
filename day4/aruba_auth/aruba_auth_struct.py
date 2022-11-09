@@ -36,11 +36,11 @@ def auth(session, host, api_port):
         raise ValueError(f"Authentication Failed: {response.status_code}")
 
 
-def aruba_get(session, relative_url):
-    base_url = "https://aruba.lasthop.io:4343/v1/configuration/"
+def aruba_get(session, host, port, relative_url):
+
+    base_url = f"https://{host}:{port}/v1/configuration/"
     full_url = f"{base_url}{relative_url}"
-    response = session.get(full_url, verify=SSL_VERIFY)
-    return response
+    return session.get(full_url, verify=SSL_VERIFY)
 
 
 def main():
@@ -72,7 +72,7 @@ def main():
     config_path = "?config_path=/mm"
     api_type = "&type='meta-only'"
     relative_url = f"{aruba_obj}{config_path}{api_type}"
-    response = aruba_get(session, relative_url)
+    response = aruba_get(session, host=host, port=api_port, relative_url=relative_url)
     my_ds = response.json()
     rich.print(response.json())
     print(relative_url)
