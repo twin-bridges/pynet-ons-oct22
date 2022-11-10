@@ -8,11 +8,11 @@ import pdbr  # noqa
 SSL_VERIFY = False
 
 
-def auth(session, host, api_port):
+def auth(session, host, api_port=4343):
     http_headers = {"Content-Type": "application/json"}
 
     # Creds
-    USERNAME = "kbyers"
+    USERNAME = input("Enter username: ")
     PASSWORD = getpass("Enter Aruba Controller password: ")
     creds = f"username={USERNAME}&password={PASSWORD}"
 
@@ -30,6 +30,11 @@ def auth(session, host, api_port):
         if auth_response.get("X-CSRF-Token"):
             # Bind headers to requests' session object
             session.headers["X-CSRF-Token"] = auth_response["X-CSRF-Token"]
+                # For Aruba Controllers <= 8.6.X
+        if auth_response.get("UIDARUBA"):
+            return auth_response["UIDARUBA"]
+        else:
+            return None
     elif response.status_code == 401:
         raise ValueError("401 Response code: Authentication Failed")
     else:

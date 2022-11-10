@@ -1,0 +1,9 @@
+
+Convert Authentication to a Function.
+
+Function should take a Requests' Session object, a hostname, and an optional API port (default the API port to 4343).
+
+The function should set the session.headers["X-CSRF-Token"] to the corresponding "X-CSRF-Token" returned from the controller 
+(if it exists).
+
+Additionally, the function should return the UIDARUBA token (if it exists). Otherwise the function should return None.

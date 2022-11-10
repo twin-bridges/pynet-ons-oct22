@@ -2,15 +2,14 @@ from getpass import getpass
 import requests
 import rich
 
-# import pdbr
 
+username = input("Enter username: ")
 PASSWORD = getpass("Enter Aruba Controller password: ")
 SSL_VERIFY = False
 
 host = "aruba.lasthop.io"
 api_port = "4343"
 login_url = f"https://{host}:{api_port}/v1/api/login"
-username = "kbyers"
 
 creds = f"username={username}&password={PASSWORD}"
 
@@ -31,6 +30,7 @@ if response.status_code == 200:
     relative_url = "object/int_vlan"
     base_url = f"https://{host}:{api_port}/v1/configuration/"
     full_url = f"{base_url}{relative_url}?{uid_aruba_qs}"
+    print(full_url)
 
     response = session.get(full_url, verify=SSL_VERIFY)
     rich.print(response.json())
