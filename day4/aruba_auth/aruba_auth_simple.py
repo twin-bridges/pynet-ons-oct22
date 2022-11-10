@@ -29,7 +29,7 @@ if response.status_code == 200:
     # Test a GET operation
     relative_url = "object/int_vlan"
     # relative_url = "object/ap_group"
-    base_url = "https://aruba.lasthop.io:4343/v1/configuration/"
+    base_url = f"https://{host}:{api_port}/v1/configuration/"
 
     full_url = f"{base_url}{relative_url}"
     print(full_url)
