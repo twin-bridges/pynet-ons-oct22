@@ -1,7 +1,7 @@
 from getpass import getpass
 import requests
 import rich
-import pdbr
+# import pdbr
 
 PASSWORD = getpass("Enter Aruba Controller password: ")
 HTTP_HEADERS = {"Content-Type": "application/json"}
