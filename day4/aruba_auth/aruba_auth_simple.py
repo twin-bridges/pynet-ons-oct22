@@ -1,10 +1,10 @@
 from getpass import getpass
 import requests
 import rich
+
 # import pdbr
 
 PASSWORD = getpass("Enter Aruba Controller password: ")
-HTTP_HEADERS = {"Content-Type": "application/json"}
 SSL_VERIFY = False
 
 host = "aruba.lasthop.io"
@@ -15,16 +15,13 @@ username = "kbyers"
 creds = f"username={username}&password={PASSWORD}"
 
 session = requests.Session()
-response = session.post(login_url, data=creds, headers=HTTP_HEADERS, verify=SSL_VERIFY)
+session.headers["Accept"] = "application/json"
+response = session.post(login_url, data=creds, verify=SSL_VERIFY)
 
 if response.status_code == 200:
-    aruba_ds = response.json().get("_global_result")
-    if aruba_ds:
-        x_csrf_token = aruba_ds["X-CSRF-Token"]
-
-    HTTP_HEADERS = {}
-    HTTP_HEADERS["Accept"] = "application/json"
-    HTTP_HEADERS["X-CSRF-Token"] = x_csrf_token
+    auth_response = response.json().get("_global_result")
+    if auth_response.get("X-CSRF-Token"):
+        session.headers["X-CSRF-Token"] = auth_response["X-CSRF-Token"]
 
     # Test a GET operation
     relative_url = "object/int_vlan"
@@ -34,5 +31,5 @@ if response.status_code == 200:
     full_url = f"{base_url}{relative_url}"
     print(full_url)
 
-    response = session.get(full_url, headers=HTTP_HEADERS, verify=SSL_VERIFY)
+    response = session.get(full_url, verify=SSL_VERIFY)
     rich.print(response.json())
