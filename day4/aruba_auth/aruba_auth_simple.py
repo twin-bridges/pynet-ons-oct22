@@ -23,13 +23,14 @@ if response.status_code == 200:
     if auth_response.get("X-CSRF-Token"):
         session.headers["X-CSRF-Token"] = auth_response["X-CSRF-Token"]
 
+    # For Aruba Controllers <= 8.6.X
+    uid_aruba = auth_response["UIDARUBA"]
+    uid_aruba_qs = f"UIDARUBA={uid_aruba}"
+
     # Test a GET operation
     relative_url = "object/int_vlan"
-    # relative_url = "object/ap_group"
     base_url = f"https://{host}:{api_port}/v1/configuration/"
-
-    full_url = f"{base_url}{relative_url}"
-    print(full_url)
+    full_url = f"{base_url}{relative_url}?{uid_aruba_qs}"
 
     response = session.get(full_url, verify=SSL_VERIFY)
     rich.print(response.json())
