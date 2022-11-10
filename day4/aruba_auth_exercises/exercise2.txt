@@ -1,0 +1,9 @@
+
+Authenticate to the Aruba Controller using the auth function which is stored in {repository}/src.
+
+This "src" directory should already be on your $PYTHONPATH.
+
+You should be able to import this function using:
+
+    import aruba_auth
+

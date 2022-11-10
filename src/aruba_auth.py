@@ -9,7 +9,7 @@ def auth(session, host, api_port=4343):
     http_headers = {"Content-Type": "application/json"}
 
     # Creds
-    USERNAME = "kbyers"
+    USERNAME = input("Enter username: ")
     PASSWORD = getpass("Enter Aruba Controller password: ")
     creds = f"username={USERNAME}&password={PASSWORD}"
 

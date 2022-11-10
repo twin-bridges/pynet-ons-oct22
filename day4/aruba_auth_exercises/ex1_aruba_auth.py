@@ -10,6 +10,7 @@ def auth(session, host, api_port=4343):
     PASSWORD = getpass("Enter Aruba Controller password: ")
     creds = f"username={username}&password={PASSWORD}"
 
+    login_url = f"https://{host}:{api_port}/v1/api/login"
     response = session.post(login_url, data=creds, verify=SSL_VERIFY)
 
     if response.status_code == 200:
@@ -34,7 +35,6 @@ def auth(session, host, api_port=4343):
 if __name__ == "__main__":
     host = "aruba.lasthop.io"
     api_port = "4343"
-    login_url = f"https://{host}:{api_port}/v1/api/login"
 
     session = requests.Session()
     session.headers["Accept"] = "application/json"
