@@ -30,7 +30,8 @@ def auth(session, host, api_port=4343):
         if auth_response.get("X-CSRF-Token"):
             # Bind headers to requests' session object
             session.headers["X-CSRF-Token"] = auth_response["X-CSRF-Token"]
-                # For Aruba Controllers <= 8.6.X
+
+        # For Aruba Controllers <= 8.6.X
         if auth_response.get("UIDARUBA"):
             return auth_response["UIDARUBA"]
         else:

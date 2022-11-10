@@ -5,7 +5,7 @@ import rich
 SSL_VERIFY = False
 
 
-def login(session, host, api_port=4343):
+def auth(session, host, api_port=4343):
     username = input("Enter username: ")
     PASSWORD = getpass("Enter Aruba Controller password: ")
     creds = f"username={username}&password={PASSWORD}"
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     session = requests.Session()
     session.headers["Accept"] = "application/json"
 
-    uid_aruba = login(session, host, api_port=api_port)
+    uid_aruba = auth(session, host, api_port=api_port)
     if uid_aruba is None:
         raise ValueError("UIDARUBA not returned in authentication request")
     uid_aruba_qs = f"UIDARUBA={uid_aruba}"
