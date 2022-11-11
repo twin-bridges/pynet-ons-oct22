@@ -1,0 +1,28 @@
+Embed the following in your Python program as a string:
+
+{
+    "VLAN CONFIGURATION": [
+        {
+            "AAA Profile": "N/A",
+            "Description": "Default",
+            "Option-82": "Disabled",
+            "Ports": "GE0/0/1 Pc0-7",
+            "VLAN": "1"
+        },
+        {
+            "AAA Profile": "N/A",
+            "Description": "VLAN0235",
+            "Option-82": "Disabled",
+            "Ports": "GE0/0/0",
+            "VLAN": "235"
+        }
+    ],
+    "_meta": [ "VLAN", "Description", "Ports", "AAA Profile", "Option-82"]
+}
+
+
+Use json.loads() to convert this JSON string over to Python data structures.
+
+Print out the type of your converted data structure. It should be a dictionary after the conversion.
+
+Remember you can use triple-quotes for a multiline string in Python.

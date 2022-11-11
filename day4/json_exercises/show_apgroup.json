@@ -1,0 +1,19 @@
+{
+    "AP group List": [
+        {
+            "Name": "default",
+            "Profile Status": null
+        },
+        {
+            "Name": "NoAuthApGroup",
+            "Profile Status": "Predefined (changed)"
+        }
+    ],
+    "_data": [
+        "2"
+    ],
+    "_meta": [
+        "Name",
+        "Profile Status"
+    ]
+}

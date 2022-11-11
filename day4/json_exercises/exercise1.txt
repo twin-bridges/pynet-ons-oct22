@@ -1,0 +1,10 @@
+
+Using Python and the "json" library, read in the file "show_apgroup.json" as structured data. This file is located in "day4/json_exercises".
+
+Which Python data-structure is returned (as the outermost data structure)?
+
+From this returned data-structure return a simple list of the AP-Group Names. Your output should look as follows:
+
+output:
+---------
+['default', 'NoAuthApGroup']
