@@ -1,0 +1,11 @@
+
+Using both the "auth" function function, connect to the Aruba Controller.
+
+Retrieve "object/ssid_prof" using a config_path of "/md/40Lab/VH" and using the "get_request" function.
+
+From the returned data structure extract the "profile-names" and put them into a simple list.
+
+Use rich.print to print this profile_name_list to the screen.
+
+Note, remember your process for dealing with complex data structures. You will need to step multiple 
+layers into this data structure to extract the field that you require.
