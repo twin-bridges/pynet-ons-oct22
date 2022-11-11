@@ -1,0 +1,8 @@
+
+Using the existing "auth" function, connect to the Aruba Controller.
+
+Construct a "showcommand" to retrieve: "show vlan".
+
+Use rich.print to print the result to the screen.
+
+Use the code in "day4/aruba_get/aruba_showcommand.py" as a model for this.
