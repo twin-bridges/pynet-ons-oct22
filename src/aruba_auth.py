@@ -38,6 +38,19 @@ def auth(session, host, api_port=4343):
         raise ValueError(f"Authentication Failed: {response.status_code}")
 
 
-def get(session, base_url, relative_url):
-    full_url = f"{base_url}{relative_url}"
-    return session.get(full_url, verify=SSL_VERIFY)
+def get_request(session, host, api_port=4343, relative_url="", config_path="", uid_aruba=""):
+
+    base_url = f"https://{host}:{api_port}/v1/configuration/"
+
+    if config_path:
+        query_string = f"?config_path={config_path}"
+        if uid_aruba:
+            query_string += f"&UIDARUBA={uid_aruba}"
+    else:
+        if uid_aruba:
+            query_string = f"?UIDARUBA={uid_aruba}"
+        else:
+            query_string = ""
+
+    full_url = f"{base_url}{relative_url}{query_string}"
+    return session.get(full_url, verify=False)

@@ -2,6 +2,7 @@ import requests
 import rich
 from aruba_auth import auth
 
+
 def proc_results(data):
     data = data["_data"]["ap_group"]
     ap_groups = [e["profile-name"] for e in data]
