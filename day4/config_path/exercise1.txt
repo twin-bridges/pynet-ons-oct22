@@ -1,0 +1,8 @@
+Using the existing "auth" function, connect to the Aruba Controller.
+
+Construct a config_path for each of the two Aruba controllers (all the way down to each controller's MAC address). The 
+two controller MAC addresses are: "20:4c:03:39:5a:fc", "20:4c:03:58:70:72"
+
+Using this config_path, query the controller for "object/hostname" and use rich.print() to print these results to the screen.
+
+Use the code in "day4/config_path/cfg_path_example.py" for reference code for config_path construction.
