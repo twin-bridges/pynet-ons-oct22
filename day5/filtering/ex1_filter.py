@@ -4,12 +4,6 @@ import rich
 from aruba_auth import auth
 
 
-def proc_results(data):
-    data = data["_data"]["ap_group"]
-    ap_groups = [e["profile-name"] for e in data]
-    return ap_groups
-
-
 host = "aruba.lasthop.io"
 api_port = "4343"
 
@@ -20,17 +14,29 @@ uid_aruba_qs = f"UIDARUBA={uid_aruba}"
 
 # Test a GET operation
 base_url = f"https://{host}:{api_port}/v1/configuration/"
-relative_url = "object/int_vlan"
+relative_url = "object/int_gig"
 
-# Object filter
-filter_object = [{"OBJECT": {"$eq": ["int_vlan.int_vlan_ip", "int_vlan.int_vlan_mtu"]}}]
-filter_qs = f"filter={json.dumps(filter_object)}"
+
 
 config_path = "?config_path=/md/40Lab/VH/20:4c:03:39:5a:fc"
-url_and_qs = f"{relative_url}{config_path}&{uid_aruba_qs}&{filter_qs}"
+url_and_qs = f"{relative_url}{config_path}&{uid_aruba_qs}"
+
+# Initial GET with no filter
 full_url = f"{base_url}{url_and_qs}"
 response = session.get(full_url, verify=False)
-# ap_groups = proc_results(response.json())
-print(f"\nCFG Path: {config_path}\n")
+print(f"\n{full_url}\n")
 rich.print(response.json())
-print(f"\n{full_url}")
+print()
+
+# Apply the Filter
+filter_object = [{"OBJECT": {"$eq": ["int_gig.slot/module/port"]}}]
+filter_qs = f"filter={json.dumps(filter_object)}"
+if filter_qs:
+    url_and_qs += f"&{filter_qs}"
+
+# Second GET with the filter
+full_url = f"{base_url}{url_and_qs}"
+response = session.get(full_url, verify=False)
+print(f"\n{full_url}\n")
+rich.print(response.json())
+print()

@@ -1,0 +1,24 @@
+
+Using the standard Aruba "auth" function located in "src" connect to the Aruba Controller.
+
+Perform an HTTP Get using:
+--------
+base_url = f"https://{host}:{api_port}/v1/configuration/"
+relative_url = "object/int_gig"
+--------
+
+With a config_path of:
+--------
+config_path = "?config_path=/md/40Lab/VH/20:4c:03:39:5a:fc"
+--------
+
+rich.print the resulting data structure to the screen.
+
+
+Now that you have viewed the full data-structure, create a filter that delimits the output to only the "slot/module/port" field.
+
+Your filter should look as follows:
+
+filter=[{"OBJECT": {"$eq": ["int_gig.slot/module/port"]}}]
+
+And this gets applied to the end of the query string.
