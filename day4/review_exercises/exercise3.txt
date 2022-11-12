@@ -1,0 +1,2 @@
+
+Construct a reusable function that allows you to simplify the execution of "showcommand" via the Aruba API.

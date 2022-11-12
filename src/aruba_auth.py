@@ -54,3 +54,14 @@ def get_request(session, host, api_port=4343, relative_url="", config_path="", u
 
     full_url = f"{base_url}{relative_url}{query_string}"
     return session.get(full_url, verify=False)
+
+
+def show_command(session, host, command, api_port=4343, uid_aruba=""):
+
+    base_url = f"https://{host}:{api_port}/v1/configuration/showcommand"
+    query_string = f"?command={command}"
+    if uid_aruba:
+        query_string += f"&UIDARUBA={uid_aruba}"
+
+    full_url = f"{base_url}{query_string}"
+    return session.get(full_url, verify=False)
