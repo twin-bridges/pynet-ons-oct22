@@ -12,10 +12,8 @@ session.headers["Accept"] = "application/json"
 uid_aruba = auth(session, host=host, api_port=api_port)
 uid_aruba_qs = f"UIDARUBA={uid_aruba}"
 
-# Test a GET operation
 base_url = f"https://{host}:{api_port}/v1/configuration/"
 relative_url = "object/int_gig"
-
 
 config_path = "?config_path=/md/40Lab/VH/20:4c:03:39:5a:fc"
 url_and_qs = f"{relative_url}{config_path}&{uid_aruba_qs}"

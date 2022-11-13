@@ -10,8 +10,8 @@ session = requests.Session()
 session.headers["Accept"] = "application/json"
 uid_aruba = auth(session, host=host)
 
-relative_url = "object/int_gig"
-config_path = "/md/40Lab/VH/20:4c:03:39:5a:fc"
+relative_url = "object/vlan_name_id"
+config_path = "/md/40Lab/VH"
 filter_str = ""
 
 # Initial GET with no filter
@@ -27,10 +27,8 @@ print()
 rich.print(response.json())
 print()
 
-# Apply the Filter
-filter_str = [{"OBJECT": {"$eq": ["int_gig.slot/module/port"]}}]
-
 # Second GET with the filter
+filter_str = [{"vlan_name_id.name": {"$in": ["guest"]}}]
 response = get_request_filter(
     session,
     host,
