@@ -14,7 +14,7 @@ uid_aruba_qs = f"UIDARUBA={uid_aruba}"
 
 # Test a GET operation
 base_url = f"https://{host}:{api_port}/v1/configuration/"
-relative_url = "object/vlan_name_id"
+relative_url = "object/int_gig"
 
 
 config_path = "?config_path=/md/40Lab/VH/20:4c:03:39:5a:fc"

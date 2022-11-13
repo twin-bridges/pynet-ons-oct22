@@ -16,13 +16,13 @@ base_url = f"https://{host}:{api_port}/v1/configuration/"
 relative_url = "object/vlan_name_id"
 
 # Object filter
-filter_data = [{"vlan_name_id.name" : { "$in" : ["user"]}}]
+filter_data = [{"vlan_name_id.name": {"$in": ["user"]}}]
 filter_qs = f"filter={json.dumps(filter_data)}"
 
 config_path = "?config_path=/md/40Lab/VH"
 url_and_qs = f"{relative_url}{config_path}&{uid_aruba_qs}"
 if filter_qs:
-    url_and_qs += f"&{filter_qs}"
+    url_and_qs += f"&{filter_qs}&type=meta-only"
 full_url = f"{base_url}{url_and_qs}"
 response = session.get(full_url, verify=False)
 

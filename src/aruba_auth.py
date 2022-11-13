@@ -1,3 +1,4 @@
+import json
 from getpass import getpass
 
 
@@ -38,7 +39,9 @@ def auth(session, host, api_port=4343):
         raise ValueError(f"Authentication Failed: {response.status_code}")
 
 
-def get_request(session, host, api_port=4343, relative_url="", config_path="", uid_aruba=""):
+def get_request(
+    session, host, api_port=4343, relative_url="", config_path="", uid_aruba=""
+):
 
     base_url = f"https://{host}:{api_port}/v1/configuration/"
 
@@ -51,6 +54,39 @@ def get_request(session, host, api_port=4343, relative_url="", config_path="", u
             query_string = f"?UIDARUBA={uid_aruba}"
         else:
             query_string = ""
+
+    full_url = f"{base_url}{relative_url}{query_string}"
+    return session.get(full_url, verify=False)
+
+
+def get_request_filter(
+    session,
+    host,
+    api_port=4343,
+    relative_url="",
+    config_path="",
+    filter_str="",
+    uid_aruba="",
+):
+
+    base_url = f"https://{host}:{api_port}/v1/configuration/"
+
+    filter_qs = ""
+    if filter_str:
+        filter_qs = f"filter={json.dumps(filter_str)}"
+
+    if config_path:
+        query_string = f"?config_path={config_path}"
+        if uid_aruba:
+            query_string += f"&UIDARUBA={uid_aruba}"
+    else:
+        if uid_aruba:
+            query_string = f"?UIDARUBA={uid_aruba}"
+        else:
+            query_string = ""
+
+    if filter_qs:
+        query_string += f"&{filter_qs}"
 
     full_url = f"{base_url}{relative_url}{query_string}"
     return session.get(full_url, verify=False)
