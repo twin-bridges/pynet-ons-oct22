@@ -1,0 +1,22 @@
+
+Use your standard auth function to authenticate to the Aruba Controller.
+
+After authenticated, perform a get_request to retrieve "object/syscontact". Use a config_path 
+of either "/md/40Lab/VH/20:4c:03:39:5a:fc" or "/md/40Lab/VH/20:4c:03:58:70:72".
+
+Print out the current "syscontact" to standard output.
+
+Now use an HTTP Post and "object/syscontact" to configure the syscontact. Once again, use a config_path 
+of either "/md/40Lab/VH/20:4c:03:39:5a:fc" or "/md/40Lab/VH/20:4c:03:58:70:72".
+
+The syscontact HTTP Post payload needs to look as follows:
+
+        {"syscontact": "Some Contact Info"}
+
+Complete the configuration by performing an "object/write_memory".
+
+Once again, this will require that you perform an HTTP Post and use a config_path of either 
+"/md/40Lab/VH/20:4c:03:39:5a:fc" or "/md/40Lab/VH/20:4c:03:58:70:72".
+
+The config_path of the write_memory should match the config_path of your earlier configuration 
+operation.
