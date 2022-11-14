@@ -1,6 +1,6 @@
 import requests
 import rich
-from aruba_auth import auth, get_request, get_request_filter, logout
+from aruba_auth import auth, show_command, logout
 
 
 host = "aruba.lasthop.io"
@@ -10,32 +10,18 @@ session = requests.Session()
 session.headers["Accept"] = "application/json"
 uid_aruba = auth(session, host=host, api_port=api_port)
 
-# Retrieve SSID Profiles
-relative_url = "object/ssid_prof"
-config_path = "/md/40Lab"
-response = get_request(
+command = "show+ap+radio-database"
+response = show_command(
     session,
     host=host,
-    relative_url=relative_url,
-    config_path=config_path,
+    command=command,
     uid_aruba=uid_aruba,
 )
 print()
-rich.print(response.json())
-print()
-
-# Repeat except with an "object" filter
-filter_object = [{"OBJECT": {"$eq": ["ssid_prof.profile_name", "ssid_prof.ssid_enable"]}}]
-response = get_request_filter(
-    session,
-    host=host,
-    relative_url=relative_url,
-    config_path=config_path,
-    filter_str=filter_object,
-    uid_aruba=uid_aruba,
-)
-print()
-rich.print(response.json())
+ap_data = response.json()
+ap_data = ap_data["AP Radio Database"]
+ap_list = [(e['Name'], e["IP Address"]) for e in ap_data]
+rich.print(ap_list)
 print()
 
 response = logout(session, host=host, uid_aruba=uid_aruba)
