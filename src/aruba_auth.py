@@ -101,3 +101,30 @@ def show_command(session, host, command, api_port=4343, uid_aruba=""):
 
     full_url = f"{base_url}{query_string}"
     return session.get(full_url, verify=False)
+
+
+def config_change(
+    session,
+    host,
+    config_payload,
+    api_port=4343,
+    relative_url="",
+    config_path="",
+    uid_aruba="",
+):
+
+    session.headers["Content-Type"] = "application/json"
+    base_url = f"https://{host}:{api_port}/v1/configuration/"
+
+    if config_path:
+        query_string = f"?config_path={config_path}"
+        if uid_aruba:
+            query_string += f"&UIDARUBA={uid_aruba}"
+    else:
+        if uid_aruba:
+            query_string = f"?UIDARUBA={uid_aruba}"
+        else:
+            query_string = ""
+
+    full_url = f"{base_url}{relative_url}{query_string}"
+    return session.post(full_url, data=json.dumps(config_payload), verify=False)
