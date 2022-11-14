@@ -1,6 +1,6 @@
 import requests
 import rich
-from aruba_auth import auth
+from aruba_auth import auth, logout
 
 host = "aruba.lasthop.io"
 api_port = "4343"
@@ -20,3 +20,8 @@ full_url = f"{base_url}{relative_url}?{uid_aruba_qs}"
 
 response = session.get(full_url, verify=False)
 rich.print(response.json())
+
+response = logout(session, host=host, uid_aruba=uid_aruba)
+print()
+rich.print(response.json())
+print()

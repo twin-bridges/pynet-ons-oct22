@@ -1,0 +1,16 @@
+
+Perform your standard authentication to the Mobility Master using your "auth" function.
+
+Configure an IP-domain name of "lasthop.io" using the newly created config function and a 
+config_path="/md/40Lab". The relevant API object is:
+
+-----------
+/object/ip_domain_name
+-----------
+
+The configuration payload is:
+-----------
+{"name": "lasthop.io"}
+-----------
+
+Complete the process by using the API to execute "write memory"

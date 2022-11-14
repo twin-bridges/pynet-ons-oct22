@@ -39,6 +39,21 @@ def auth(session, host, api_port=4343):
         raise ValueError(f"Authentication Failed: {response.status_code}")
 
 
+def logout(session, host, api_port=4343, uid_aruba=""):
+
+    url = f"https://{host}:{api_port}/v1/api/logout"
+    if uid_aruba:
+        query_string = f"?UIDARUBA={uid_aruba}"
+    else:
+        query_string = ""
+
+    full_url = f"{url}{query_string}"
+
+    return session.post(
+        full_url, verify=False
+    )
+
+
 def get_request(
     session, host, api_port=4343, relative_url="", config_path="", uid_aruba=""
 ):
@@ -106,10 +121,10 @@ def show_command(session, host, command, api_port=4343, uid_aruba=""):
 def config_change(
     session,
     host,
-    config_payload,
     api_port=4343,
     relative_url="",
     config_path="",
+    config_payload="",
     uid_aruba="",
 ):
 
@@ -127,4 +142,8 @@ def config_change(
             query_string = ""
 
     full_url = f"{base_url}{relative_url}{query_string}"
-    return session.post(full_url, data=json.dumps(config_payload), verify=False)
+    if config_payload:
+        return session.post(full_url, data=json.dumps(config_payload), verify=False)
+    else:
+        # Allow POSTs like "write memory" that have no payload
+        return session.post(full_url, verify=False)
