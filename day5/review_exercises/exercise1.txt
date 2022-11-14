@@ -1,0 +1,10 @@
+
+Using entirely the functions located in the aruba_auth.py module, connect to the Aruba controllers and 
+retrieve "object/ssid_prof" (use a config_path="/md/40Lab")
+
+Use rich.print() to print the returned data structure to standard output.
+
+Repeat this process except apply an "object" filter such that only the "profile-name" field and the 
+"ssid_enable" fields are returned for each SSID Profile.
+
+Make sure you call the "logout" function at the end of your program.

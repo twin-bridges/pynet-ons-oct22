@@ -1,0 +1,11 @@
+
+Using the functions located in the aruba_auth.py module, connect to the Aruba controllers.
+
+Configure the VLAN name for VLAN 909 to be "guest3". You should use the "object/vlan_name_id" to accomplish this.
+Look up the required payload in the Aruba API documentation at https://aruba.lasthop.io:4343/api/.
+
+"object/vlan_name_id" is in the "Interfaces" section of the documentation.
+
+After you have configured the VLAN, execute write memory.
+
+Finally, gracefully logout using the logout function.
