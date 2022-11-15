@@ -1,3 +1,4 @@
+
 Using the existing "auth" function, connect to the Aruba Controller.
 
 Construct a config_path for each of the two Aruba controllers (all the way down to each controller's MAC address). The 

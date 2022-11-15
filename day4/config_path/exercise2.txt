@@ -1,2 +1,3 @@
 
-Repeat "config_path" exercise1 except use the "get_request" function located in the aruba_auth module.
+Repeat "config_path" exercise1 except use the "get_request" function 
+located in the aruba_auth module.
