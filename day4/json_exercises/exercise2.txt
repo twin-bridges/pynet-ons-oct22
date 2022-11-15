@@ -23,6 +23,7 @@ Embed the following in your Python program as a string:
 
 Use json.loads() to convert this JSON string over to Python data structures.
 
-Print out the type of your converted data structure. It should be a dictionary after the conversion.
+Print out the type of your converted data structure. It should be a 
+dictionary after the conversion.
 
 Remember you can use triple-quotes for a multiline string in Python.
