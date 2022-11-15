@@ -1,5 +1,5 @@
 
-Using both the "auth" function function, connect to the Aruba Controller.
+Using the "auth" function, connect to the Aruba Controller.
 
 Retrieve "object/ssid_prof" using a config_path of "/md/40Lab/VH" and using the "get_request" function.
 
