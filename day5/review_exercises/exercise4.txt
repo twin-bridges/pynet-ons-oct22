@@ -1,0 +1,11 @@
+Using your ArubaAPI class, connect to the Aruba Controller.
+
+Using your get_request method query the controller for "object/sys_info"
+
+From the returned data structure extract the following items: the software version
+at the "global" level.
+
+Also extract whether a "write memory" is required and the username that last saved
+the config.
+
+Print these fields out to standard output.
