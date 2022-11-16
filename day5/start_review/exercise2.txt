@@ -1,0 +1,6 @@
+
+Using the ArubaAPI class located in aruba_class.py, connect to the API.
+
+Use the show_command method to execute command="show+interface+counters".
+
+For interface GE0/0/0, extract the InOctets and OutOctets and print those values to standard output.
