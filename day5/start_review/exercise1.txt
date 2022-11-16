@@ -1,0 +1,15 @@
+
+Using the json library, read in "int_gig.json" and load it into your Python program.
+
+--------
+import json
+with open("int_gig.json") as f:
+    data = json.load(f)
+--------
+
+What type of data structure is returned?
+
+From this data-structure, extract all of interface names ("slot/module/port" field) and the "int_gig_speed" and
+"int_gig_duplex" fields. 
+
+Print out the four interface names (slot/module/port) and their corresponding speed and duplex setting.

@@ -1,0 +1,355 @@
+{
+    "_data": {
+        "int_gig": [
+            {
+                "slot/module/port": "0/0/0",
+                "int_gig_speed": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "port_speed": "auto"
+                },
+                "int_gig_duplex": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "duplex_mode": "auto"
+                },
+                "int_gig_lldp_ti": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 30
+                },
+                "int_gig_lldp_th": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 4
+                },
+                "int_gig_lldp_fti": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 1
+                },
+                "int_gig_lldp_ftc": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "counter": 4
+                },
+                "int_gig_access_vlan": {
+                    "id": 235
+                },
+                "int_gig_mode": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "port_mode": "access"
+                },
+                "int_gig_vlan": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "WORD": "1-4094"
+                },
+                "int_gig_vlan_native": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "id": 1
+                },
+                "int_gig_stp_cost": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 2000
+                },
+                "int_gig_stp_prio": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 128
+                },
+                "int_gig_stp_p2p": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                },
+                "int_gig_stp": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                },
+                "int_gig_trusted_vlan": {
+                    "WORD": "1-4094"
+                },
+                "int_gig_trusted": {}
+            },
+            {
+                "slot/module/port": "0/0/1",
+                "int_gig_speed": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "port_speed": "auto"
+                },
+                "int_gig_duplex": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "duplex_mode": "auto"
+                },
+                "int_gig_lldp_ti": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 30
+                },
+                "int_gig_lldp_th": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 4
+                },
+                "int_gig_lldp_fti": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 1
+                },
+                "int_gig_lldp_ftc": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "counter": 4
+                },
+                "int_gig_access_vlan": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "id": 1
+                },
+                "int_gig_mode": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "port_mode": "access"
+                },
+                "int_gig_vlan": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "WORD": "1-4094"
+                },
+                "int_gig_vlan_native": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "id": 1
+                },
+                "int_gig_stp_cost": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 2000
+                },
+                "int_gig_stp_prio": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 128
+                },
+                "int_gig_stp_p2p": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                },
+                "int_gig_stp": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                }
+            },
+            {
+                "slot/module/port": "0/0/2",
+                "int_gig_speed": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "port_speed": "auto"
+                },
+                "int_gig_duplex": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "duplex_mode": "auto"
+                },
+                "int_gig_lldp_ti": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 30
+                },
+                "int_gig_lldp_th": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 4
+                },
+                "int_gig_lldp_fti": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 1
+                },
+                "int_gig_lldp_ftc": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "counter": 4
+                },
+                "int_gig_access_vlan": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "id": 1
+                },
+                "int_gig_mode": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "port_mode": "access"
+                },
+                "int_gig_vlan": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "WORD": "1-4094"
+                },
+                "int_gig_vlan_native": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "id": 1
+                },
+                "int_gig_stp_cost": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 2000
+                },
+                "int_gig_stp_prio": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 128
+                },
+                "int_gig_stp_p2p": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                },
+                "int_gig_stp": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                }
+            },
+            {
+                "slot/module/port": "0/0/3",
+                "int_gig_speed": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "port_speed": "auto"
+                },
+                "int_gig_duplex": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "duplex_mode": "auto"
+                },
+                "int_gig_lldp_ti": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 30
+                },
+                "int_gig_lldp_th": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 4
+                },
+                "int_gig_lldp_fti": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "interval": 1
+                },
+                "int_gig_lldp_ftc": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "counter": 4
+                },
+                "int_gig_access_vlan": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "id": 1
+                },
+                "int_gig_mode": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "port_mode": "access"
+                },
+                "int_gig_vlan": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "WORD": "1-4094"
+                },
+                "int_gig_vlan_native": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "id": 1
+                },
+                "int_gig_stp_cost": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 2000
+                },
+                "int_gig_stp_prio": {
+                    "_flags": {
+                        "default": true
+                    },
+                    "value": 128
+                },
+                "int_gig_stp_p2p": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                },
+                "int_gig_stp": {
+                    "_present": true,
+                    "_flags": {
+                        "default": true
+                    }
+                }
+            }
+        ]
+    }
+}
