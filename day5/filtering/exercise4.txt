@@ -1,3 +1,5 @@
 
 
-Create a new version of filtering exercise2. This new version should use the "get_request_filter" function.
+Create a new version of filtering exercise2. This new version should use the "get_request" method
+and the filter_obj argument.
+
