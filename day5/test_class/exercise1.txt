@@ -1,0 +1,6 @@
+
+Using the class located in src/aruba_class.py connect to the Aruba Controller.
+
+Construct a query to retrieve "object/hostname" using the get_request() method. 
+
+Use rich.print to print the result to the screen.
