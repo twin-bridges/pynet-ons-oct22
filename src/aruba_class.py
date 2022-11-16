@@ -1,4 +1,5 @@
 import requests
+import json
 
 
 class ArubaAPI:
@@ -69,6 +70,33 @@ class ArubaAPI:
             return response.json()
         else:
             raise ValueError(f"Get Request Failed: {response.status_code}")
+
+    def config_change(
+        self,
+        relative_url,
+        config_payload="",
+        config_path="",
+    ):
+
+        self.session.headers["Content-Type"] = "application/json"
+        base_url = f"https://{self.host}:{self.api_port}/v1/configuration/"
+
+        if config_path:
+            query_string = f"?config_path={config_path}"
+            if self.uid_aruba:
+                query_string += f"&UIDARUBA={self.uid_aruba}"
+        else:
+            if self.uid_aruba:
+                query_string = f"?UIDARUBA={self.uid_aruba}"
+            else:
+                query_string = ""
+
+        full_url = f"{base_url}{relative_url}{query_string}"
+        if config_payload:
+            return self.session.post(full_url, data=json.dumps(config_payload), verify=False)
+        else:
+            # Allow POSTs like "write memory" that have no payload
+            return self.session.post(full_url, verify=False)
 
     def logout(self):
 
