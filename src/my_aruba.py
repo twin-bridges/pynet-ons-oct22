@@ -90,9 +90,9 @@ class ArubaAPI:
             query_string += f"&{uid_aruba_qs}"
 
         if filter_obj and isinstance(filter_obj, str):
-            query_string += f"filter={filter_obj}"
+            query_string += f"&filter={filter_obj}"
         else:
-            query_string += f"filter={json.dumps(filter_obj)}"
+            query_string += f"&filter={json.dumps(filter_obj)}"
 
         full_url = f"{base_url}{relative_url}{query_string}"
         response = self.session.get(full_url, verify=False)
