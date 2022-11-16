@@ -153,3 +153,28 @@ class ArubaAPI:
 
         full_url = f"{url}{query_string}"
         return self.session.post(full_url, verify=False)
+
+    def config_change(
+        self,
+        relative_url,
+        payload="",
+        config_path="/mm/mynode",
+    ):
+
+        base_url = f"https://{self.host}:{self.api_port}/v1/configuration/"
+        uid_aruba_qs = f"UIDARUBA={self.uid_aruba}"
+
+        # Adding the UID_ARUBA query string for compatibility with 8.6.X.X
+        query_string = f"?config_path={config_path}"
+        if self.uid_aruba:
+            query_string += f"&{uid_aruba_qs}"
+
+        full_url = f"{base_url}{relative_url}{query_string}"
+
+        if payload:
+            response = self.session.post(
+                full_url, data=json.dumps(payload), verify=False
+            )
+        else:
+            response = self.session.post(full_url, verify=False)
+        return response.json()
