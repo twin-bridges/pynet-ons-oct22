@@ -40,6 +40,34 @@ def show_command(session, host, command, uid_aruba, api_port="4343"):
         raise ValueError(f"Get Request Failed: {response.status_code}")
 
 
+def config_change(
+    session,
+    host,
+    relative_url,
+    uid_aruba,
+    payload="",
+    config_path="/mm/mynode",
+    api_port="4343",
+):
+
+    base_url = f"https://{host}:{api_port}/v1/configuration/"
+    uid_aruba_qs = f"UIDARUBA={uid_aruba}"
+
+    # Adding the UID_ARUBA query string for compatibility with 8.6.X.X
+    query_string = f"?config_path={config_path}"
+    if uid_aruba:
+        query_string += f"&{uid_aruba_qs}"
+
+    full_url = f"{base_url}{relative_url}{query_string}"
+
+    if payload:
+        response = session.post(full_url, data=json.dumps(payload), verify=False)
+    else:
+        response = session.post(full_url, verify=False)
+
+    return response.json()
+
+
 class ArubaAPI:
     def __init__(self, host, username, password, api_port="4343"):
         self.host = host
